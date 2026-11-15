@@ -1,0 +1,135 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Explore.dc.html": {
+      "h": 2500,
+      "title": "Explore — the trail map & drawers",
+      "w": 1440,
+      "x": 2980,
+      "y": 0
+    },
+    "Journey.dc.html": {
+      "h": 7600,
+      "title": "Visitor journey — you’re the call",
+      "w": 1440,
+      "x": 4540,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Desktop — The Switchboard",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Mobile — home",
+      "w": 390,
+      "x": 1560,
+      "y": 0
+    },
+    "MobileMenu.dc.html": {
+      "h": 844,
+      "title": "Mobile — menu open",
+      "w": 390,
+      "x": 2030,
+      "y": 0
+    },
+    "Motion.dc.html": {
+      "h": 4300,
+      "title": "Motion library (per-scene details)",
+      "w": 1440,
+      "x": 6100,
+      "y": 0
+    },
+    "OSDesktop.dc.html": {
+      "h": 960,
+      "radius": 18,
+      "title": "KayodeOS — desktop · Career Calendar",
+      "w": 1440,
+      "x": 0,
+      "y": 12000
+    },
+    "OSPhoneHome.dc.html": {
+      "h": 844,
+      "radius": 48,
+      "title": "KayodeOS — phone home screen",
+      "w": 390,
+      "x": 1990,
+      "y": 12000
+    },
+    "OSPhoneLock.dc.html": {
+      "h": 844,
+      "radius": 48,
+      "title": "KayodeOS — phone lock screen",
+      "w": 390,
+      "x": 1520,
+      "y": 12000
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-23T20:40:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "noteOrder": [
+    "title",
+    "domains",
+    "cv",
+    "os-title"
+  ],
+  "notes": {
+    "cv": {
+      "fill": "gray",
+      "text": "Download CV buttons point to the Drive copy of Kayode_Samson_Adelola_CV_2026. Swap for /cv.pdf on the final domain.",
+      "w": 360,
+      "x": 2500,
+      "y": 560
+    },
+    "domains": {
+      "fill": "green",
+      "size": 24,
+      "text": "Domain shortlist (availability not checked)\n\n1. kayode.dev\n2. kayodeadelola.dev\n3. rastaxarm.dev\n4. xarmzon.dev\n5. kayode.com.ng\n6. adelola.dev\n7. kayode.engineer\n8. onthelinewith.kayode.dev (subdomain idea)\n\nPick: kayode.dev, fallback rastaxarm.dev",
+      "w": 360,
+      "x": 2500,
+      "y": 0
+    },
+    "os-title": {
+      "kind": "title1",
+      "maxW": 2380,
+      "text": "KayodeOS — calendar + iOS · macOS · Android direction",
+      "w": 240,
+      "x": 0,
+      "y": 11700
+    },
+    "title": {
+      "kind": "title1",
+      "maxW": 7540,
+      "text": "Kayode — The Switchboard portfolio",
+      "w": 240,
+      "x": 0,
+      "y": -320
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Mobile.dc.html",
+    "MobileMenu.dc.html",
+    "Explore.dc.html",
+    "Journey.dc.html",
+    "Motion.dc.html",
+    "OSDesktop.dc.html",
+    "OSPhoneLock.dc.html",
+    "OSPhoneHome.dc.html"
+  ],
+  "pages": [],
+  "title": "Kayode Portfolio"
+}

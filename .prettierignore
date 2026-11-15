@@ -1,0 +1,8 @@
+dist
+.wrangler
+.tanstack
+design
+docs
+package-lock.json
+src/routeTree.gen.ts
+worker-configuration.d.ts

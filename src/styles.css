@@ -1,0 +1,149 @@
+/* Self-hosted fonts (latin subsets only). */
+@import '@fontsource/tilt-warp/latin-400.css';
+@import '@fontsource-variable/geologica/wght.css';
+@import '@fontsource-variable/martian-mono/wght.css';
+
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+/*
+ * Design tokens. The single source of truth for colour, type, shape and
+ * elevation. The site is dark-first; light "paper" surfaces sit on top.
+ */
+:root {
+  --ink: #0e1712;
+  --paper: #eef0e4;
+  --signal: #22d46b;
+  --lime: #c8f25a;
+  --panel: #18241d;
+  --rule: #2c3b31;
+  --muted: #4f5a50; /* secondary text on paper, 6.3:1 */
+  --muted-dark: #9aaa9e; /* secondary text on ink, 6.6:1 */
+  --alert: #e35d5d; /* "now" markers and window close button only */
+
+  --shadow-window: 0 24px 60px rgba(14, 23, 18, 0.18), 0 2px 2px rgba(14, 23, 18, 0.12);
+
+  /* shadcn/ui variables, mapped onto the tokens above. */
+  --background: var(--ink);
+  --foreground: var(--paper);
+  --card: var(--panel);
+  --card-foreground: var(--paper);
+  --popover: var(--panel);
+  --popover-foreground: var(--paper);
+  --primary: var(--signal);
+  --primary-foreground: var(--ink);
+  --secondary: var(--lime);
+  --secondary-foreground: var(--ink);
+  --muted-surface: var(--panel);
+  --muted-foreground: var(--muted-dark);
+  --accent: var(--panel);
+  --accent-foreground: var(--paper);
+  --destructive: var(--alert);
+  --border: var(--rule);
+  --input: var(--rule);
+  --ring: var(--lime);
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-signal: var(--signal);
+  --color-lime: var(--lime);
+  --color-panel: var(--panel);
+  --color-rule: var(--rule);
+  --color-muted-ink: var(--muted);
+  --color-muted-dark: var(--muted-dark);
+  --color-alert: var(--alert);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted-surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-display: 'Tilt Warp', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Geologica Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Martian Mono Variable', ui-monospace, monospace;
+
+  /* Fluid type: H1 42–104px, H2 32–64px, body 15–17px (390–1440px viewports). */
+  --text-h1: clamp(2.625rem, 1.5rem + 5.6vw, 6.5rem);
+  --text-h1--line-height: 0.98;
+  --text-h1--letter-spacing: -0.03em;
+  --text-h2: clamp(2rem, 1.25rem + 3vw, 4rem);
+  --text-h2--line-height: 1.02;
+  --text-h2--letter-spacing: -0.02em;
+  --text-body: clamp(0.9375rem, 0.875rem + 0.2vw, 1.0625rem);
+  --text-body--line-height: 1.6;
+  --text-label: 0.6875rem;
+  --text-label--letter-spacing: 0.1em;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
+
+  --shadow-window: var(--shadow-window);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background font-sans text-body text-foreground antialiased;
+    overflow-x: clip;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@utility gutter {
+  padding-inline: 1rem;
+  @media (width >= 48rem) {
+    padding-inline: 2rem;
+  }
+}

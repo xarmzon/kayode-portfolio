@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kayode — The Switchboard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&amp;family=Geologica:wght@400;500;600;700&amp;family=Martian+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0E1712}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="background: #EEF0E4; color: #0E1712; font-family: 'Geologica', system-ui, sans-serif; min-height: 100vh; overflow-x: hidden">
+
+  <!-- NAV -->
+  <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px clamp(16px, 4vw, 56px); border-bottom: 2px solid #0E1712; background: #EEF0E4">
+    <a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #0E1712">
+      <span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #0E1712; display: flex; align-items: center; justify-content: center">
+        <span style="width: 14px; height: 14px; border-radius: 50%; background: {{accent}}; box-shadow: 0 0 0 4px #0E1712, 0 0 0 6px #EEF0E4"></span>
+      </span>
+      <span style="display: flex; flex-direction: column; line-height: 1">
+        <span style="font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 18px; letter-spacing: -0.01em">KAYODE</span>
+        <span style="font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #4F5A50; margin-top: 4px">THE SWITCHBOARD</span>
+      </span>
+    </a>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px">
+      <a href="#lines" style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; text-decoration: none; padding: 12px 14px; border-radius: 999px">01 Lines</a>
+      <a href="#log" style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; text-decoration: none; padding: 12px 14px; border-radius: 999px">02 Call log</a>
+      <a href="#room" style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; text-decoration: none; padding: 12px 14px; border-radius: 999px">03 Switch room</a>
+      <a href="#cables" style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; text-decoration: none; padding: 12px 14px; border-radius: 999px">04 Patch cables</a>
+      <a href="#broadcast" style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; text-decoration: none; padding: 12px 14px; border-radius: 999px">05 Broadcast</a>
+    </nav>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+      <a href="https://drive.google.com/uc?export=download&amp;id=1oPKm7xLPt8nyLgTQi5NGwrcCOR1z7DrC" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 2px solid #0E1712; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; color: #0E1712; background: #C8F25A">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
+        Download CV
+      </a>
+      <a href="mailto:xarmzon@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; color: #EEF0E4; background: #0E1712">
+        <span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: {{accent}}"></span>
+        Ring the line
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO / BOARD -->
+  <section id="top" style="background-color: #0E1712; background-image: radial-gradient(circle, #1F2B24 0 5px, transparent 6px); background-size: 46px 46px; color: #EEF0E4; padding: clamp(40px, 7vw, 104px) clamp(16px, 4vw, 56px) clamp(32px, 5vw, 64px); position: relative">
+    <div style="max-width: 1280px; margin: 0 auto">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; color: #9AAA9E">
+        <span>OPERATOR ON DUTY · ILORIN, NIGERIA · UTC+1</span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; color: #EEF0E4"><span aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: {{accent}}; box-shadow: 0 0 0 4px rgba(34,212,107,0.25)"></span>3 LINES LIVE</span>
+      </div>
+
+      <p style="margin: clamp(28px, 4vw, 48px) 0 0; font-size: clamp(17px, 1.6vw, 21px); color: #CFD9D1; max-width: 640px">Hi, I'm <strong style="color: #EEF0E4">Kayode Samson Adelola</strong> — Rastaxarm on the wire. Full-stack lead developer in fintech.</p>
+
+      <h1 style="margin: 18px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(42px, 6.6vw, 104px); line-height: 1.02; letter-spacing: -0.03em; max-width: 1180px">I put businesses on a <span style="background: #C8F25A; color: #0E1712; padding: 0 0.18em; border-radius: 0.18em; display: inline-block; transform: rotate(-1.5deg)">live line</span> to the people they serve.</h1>
+
+      <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 4vw, 64px); align-items: flex-end; justify-content: space-between; margin-top: clamp(28px, 4vw, 48px)">
+        <p style="margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: #CFD9D1; max-width: 560px; flex: 1 1 360px">I build the Go, C# and Node services and the Angular and React screens on top of them — so every request, payment and notification actually gets through.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px">
+          <a href="#lines" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 26px; border-radius: 999px; background: {{accent}}; color: #0E1712; font-weight: 700; font-size: 17px; text-decoration: none; box-shadow: 5px 5px 0 #EEF0E4">Trace my lines
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>
+          </a>
+          <a href="https://drive.google.com/uc?export=download&amp;id=1oPKm7xLPt8nyLgTQi5NGwrcCOR1z7DrC" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 26px; border-radius: 999px; border: 2px solid #EEF0E4; color: #EEF0E4; font-weight: 700; font-size: 17px; text-decoration: none">Grab the CV
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- switchboard panel -->
+      <div style="margin-top: clamp(40px, 6vw, 80px); border: 2px solid #2C3B31; border-radius: 28px; padding: 20px clamp(12px, 2vw, 28px) 28px; background: #15201A">
+        <div style="display: flex; justify-content: space-between; font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #9AAA9E">
+          <span>PATCH PANEL · LIVE</span><span>PLUG IN BELOW ↓</span>
+        </div>
+        <div style="position: relative; height: 240px; margin-top: 8px">
+          <svg aria-hidden="true" viewBox="0 0 1000 240" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%">
+            <path d="M125 72 C 300 280, 700 280, 875 72" fill="none" stroke="{{accent}}" stroke-width="8" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+            <path d="M375 72 C 500 228, 760 228, 875 72" fill="none" stroke="#C8F25A" stroke-width="8" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+            <path d="M625 72 C 700 168, 810 168, 875 72" fill="none" stroke="#EEF0E4" stroke-width="8" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+          </svg>
+          <div style="position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px">
+              <span style="font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em">YALO</span>
+              <span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #08100B; border: 6px solid {{accent}}; box-sizing: border-box"></span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px">
+              <span style="font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em">PENAID</span>
+              <span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #08100B; border: 6px solid #C8F25A; box-sizing: border-box"></span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px">
+              <span style="font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em">CONSULTING</span>
+              <span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #08100B; border: 6px solid #EEF0E4; box-sizing: border-box"></span>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px">
+              <span style="font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; color: #C8F25A">THEIR USERS</span>
+              <span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #08100B; border: 6px solid #9AAA9E; box-sizing: border-box"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div aria-hidden="true" style="background: {{accent}}; color: #0E1712; border-top: 2px solid #0E1712; border-bottom: 2px solid #0E1712; transform: rotate(-1.2deg); margin: -10px -20px 0; padding: 14px 0; white-space: nowrap; overflow: hidden; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(14px, 1.4vw, 18px); letter-spacing: 0.02em">
+    GO  ✱  TYPESCRIPT  ✱  NODE.JS  ✱  ANGULAR  ✱  REACT  ✱  AWS LAMBDA  ✱  SQS  ✱  SNS  ✱  C#  ✱  DELUGE  ✱  MONGODB  ✱  POSTGRESQL  ✱  ZOHO CRM  ✱  GO  ✱  TYPESCRIPT  ✱  NODE.JS  ✱  ANGULAR  ✱  REACT
+  </div>
+
+  <!-- LINES -->
+  <section id="lines" style="padding: clamp(64px, 8vw, 120px) clamp(16px, 4vw, 56px) 0">
+    <div style="max-width: 1280px; margin: 0 auto"><div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px"><div><p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: #4F5A50">§01 — NOW CONNECTING · OPEN WINDOWS</p><h2 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.04; letter-spacing: -0.025em; max-width: 860px">Three lines, open right now.</h2></div><p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 1.55; color: #4F5A50">Each line is a window into one company — and the people it serves on the other end.</p></div><div style="display: flex; flex-direction: column; gap: 36px; margin-top: 48px"><article style="border-radius: 26px; overflow: hidden; background: #C8F25A; box-shadow: 0 24px 60px rgba(14,23,18,0.18), 0 2px 6px rgba(14,23,18,0.08)"><div style="display: flex; align-items: center; gap: 12px; padding: 12px 18px; background: rgba(255,255,255,0.7); border-bottom: 1.5px solid #D3DAC6"><span aria-hidden="true" style="display: flex; gap: 7px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #E35D5D"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #22D46B"></span></span><span style="font-weight: 700; font-size: 14px">YALO — Line 01</span><span style="margin-left: auto; font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; color: #4F5A50">#/trail/yalo</span></div><div style="display: grid; grid-template-columns: minmax(260px, 0.9fr) minmax(0, 2fr); gap: 24px; padding: 14px"><div style="position: relative; border-radius: 18px; overflow: hidden"><div style="position: relative; height: 100%; min-height: 320px; background: #123A2A; overflow: hidden"><svg aria-hidden="true" viewBox="0 0 360 150" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%"><rect x="77" y="67.5" width="6" height="82.5" fill="#0C271C"></rect><circle cx="80" cy="57.0" r="60" fill="#0C271C"></circle><rect x="267" y="73.0" width="6" height="77.0" fill="#0C271C"></rect><circle cx="270" cy="63.2" r="56" fill="#0C271C"></circle><rect x="60" y="66" width="34" height="24" fill="#0A1E15"></rect><path d="M56 66 L77 52 L98 66 Z" fill="#0A1E15"></path><rect x="73" y="74" width="8" height="8" fill="#C8F25A"></rect><rect x="100" y="92" width="34" height="24" fill="#0A1E15"></rect><path d="M96 92 L117 78 L138 92 Z" fill="#0A1E15"></path><rect x="113" y="100" width="8" height="8" fill="#C8F25A"></rect><rect x="250" y="60" width="34" height="24" fill="#0A1E15"></rect><path d="M246 60 L267 46 L288 60 Z" fill="#0A1E15"></path><rect x="263" y="68" width="8" height="8" fill="#C8F25A"></rect><rect x="284" y="88" width="34" height="24" fill="#0A1E15"></rect><path d="M280 88 L301 74 L322 88 Z" fill="#0A1E15"></path><rect x="297" y="96" width="8" height="8" fill="#C8F25A"></rect><path d="M96 92 C 150 120, 210 110, 252 84" fill="none" stroke="#22D46B" stroke-width="3" stroke-dasharray="2 6" stroke-linecap="round"></path><circle cx="180" cy="26" r="10" fill="#EEF0E4" opacity="0.85"></circle></svg><span style="position: absolute; left: 14px; top: 14px; font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #EEF0E4; background: rgba(8,16,11,0.8); padding: 5px 10px; border-radius: 999px">HOMES IN THE CANOPY</span></div><span style="position: absolute; right: 16px; bottom: 16px; transform: rotate(-10deg); font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #C8F25A; border: 3px solid #C8F25A; padding: 6px 10px; border-radius: 10px; background: rgba(8,16,11,0.55)">● LIVE</span></div><div style="padding: 28px 32px 32px 8px; display: flex; flex-direction: column; gap: 16px; min-width: 0"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em"><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #C8F25A; padding: 6px 12px; border-radius: 999px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: {{accent}}"></span>LIVE · SINCE 2025</span><span style="color: #4F5A50">FULL-STACK LEAD DEVELOPER</span></div><p style="margin: 0; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.08em">CONNECTING YALO → RENTERS &amp; THEIR EMPLOYERS</p><h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.06; letter-spacing: -0.02em">Keeping YALO on a live line with every renter it houses.</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #36423A">As lead developer, I own YALO's backend and frontend end to end — the services and APIs, the customer dashboards, the admin portals and the employee marketplace — plus the team's Zoho CRM widget platform. Rent now, pay later only works if every screen and every call lands.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Angular</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">React 19</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">C# · ASP.NET Core</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">TypeScript</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Zoho CRM + Deluge</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">AWS</span></div><div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px"><a href="https://yalo.ng" style="display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 20px; border-radius: 999px; background: #0E1712; color: #EEF0E4; border: 2px solid #0E1712; font-weight: 700; font-size: 16px; text-decoration: none">Visit yalo.ng <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></div></div></div></article><article style="border-radius: 26px; overflow: hidden; background: #FFFFFF; box-shadow: 0 24px 60px rgba(14,23,18,0.18), 0 2px 6px rgba(14,23,18,0.08)"><div style="display: flex; align-items: center; gap: 12px; padding: 12px 18px; background: rgba(255,255,255,0.7); border-bottom: 1.5px solid #D3DAC6"><span aria-hidden="true" style="display: flex; gap: 7px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #E35D5D"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #22D46B"></span></span><span style="font-weight: 700; font-size: 14px">Penaid — Line 02</span><span style="margin-left: auto; font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; color: #4F5A50">#/trail/penaid</span></div><div style="display: grid; grid-template-columns: minmax(260px, 0.9fr) minmax(0, 2fr); gap: 24px; padding: 14px"><div style="position: relative; border-radius: 18px; overflow: hidden"><div style="position: relative; height: 100%; min-height: 320px; background: #173426; overflow: hidden"><svg aria-hidden="true" viewBox="0 0 360 150" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%"><rect x="0" y="130" width="360" height="20" fill="#0D2218"></rect><rect x="67" y="58.5" width="6" height="71.5" fill="#0D2218"></rect><circle cx="70" cy="49.400000000000006" r="56" fill="#0D2218"></circle><rect x="287" y="64.0" width="6" height="66.0" fill="#0D2218"></rect><circle cx="290" cy="55.599999999999994" r="50" fill="#0D2218"></circle><rect x="150" y="118" width="3" height="12" fill="#22D46B"></rect><circle cx="151.5" cy="116" r="5" fill="#22D46B"></circle><rect x="180" y="118" width="3" height="12" fill="#22D46B"></rect><circle cx="181.5" cy="116" r="5" fill="#22D46B"></circle><rect x="210" y="118" width="3" height="12" fill="#22D46B"></rect><circle cx="211.5" cy="116" r="5" fill="#22D46B"></circle><rect x="240" y="118" width="3" height="12" fill="#22D46B"></rect><circle cx="241.5" cy="116" r="5" fill="#22D46B"></circle><path d="M180 26 L145.0 52.6" stroke="#C8F25A" stroke-width="2"></path><path d="M180 26 L215.0 52.6" stroke="#C8F25A" stroke-width="2"></path><path d="M145.0 52.6 L127.5 79.2" stroke="#C8F25A" stroke-width="2"></path><path d="M145.0 52.6 L162.5 79.2" stroke="#C8F25A" stroke-width="2"></path><path d="M215.0 52.6 L197.5 79.2" stroke="#C8F25A" stroke-width="2"></path><path d="M215.0 52.6 L232.5 79.2" stroke="#C8F25A" stroke-width="2"></path><circle cx="180" cy="26" r="3.2" fill="#C8F25A"></circle><circle cx="145.0" cy="52.6" r="3.2" fill="#C8F25A"></circle><circle cx="215.0" cy="52.6" r="3.2" fill="#C8F25A"></circle><circle cx="127.5" cy="79.2" r="3.2" fill="#C8F25A"></circle><circle cx="162.5" cy="79.2" r="3.2" fill="#C8F25A"></circle><circle cx="197.5" cy="79.2" r="3.2" fill="#C8F25A"></circle><circle cx="232.5" cy="79.2" r="3.2" fill="#C8F25A"></circle><text x="132" y="104" fill="#EEF0E4" opacity="0.7" font-family="Martian Mono, monospace" font-size="10" font-weight="600">grow(seed)</text></svg><span style="position: absolute; left: 14px; top: 14px; font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #EEF0E4; background: rgba(8,16,11,0.8); padding: 5px 10px; border-radius: 999px">OLD-GROWTH TREES AND NEW SAPLINGS</span></div><span style="position: absolute; right: 16px; bottom: 16px; transform: rotate(-10deg); font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #C8F25A; border: 3px solid #C8F25A; padding: 6px 10px; border-radius: 10px; background: rgba(8,16,11,0.55)">● LIVE</span></div><div style="padding: 28px 32px 32px 8px; display: flex; flex-direction: column; gap: 16px; min-width: 0"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em"><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #C8F25A; padding: 6px 12px; border-radius: 999px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: {{accent}}"></span>LIVE · SINCE 2023</span><span style="color: #4F5A50">SENIOR DEVELOPER</span></div><p style="margin: 0; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.08em">CONNECTING PENAID → PENSIONERS &amp; STUDENTS</p><h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.06; letter-spacing: -0.02em">Putting Penaid on a direct line to every pensioner and student it backs.</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #36423A">Full-stack across the platform: high-performance services and APIs built for speed and concurrency, wired to frontends I take from Figma to production.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Go</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Angular</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">React</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">TypeScript</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">REST APIs</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">AWS</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Zoho Desk</span></div><div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px"><a href="https://penaid.co" style="display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 20px; border-radius: 999px; background: #0E1712; color: #EEF0E4; border: 2px solid #0E1712; font-weight: 700; font-size: 16px; text-decoration: none">Visit penaid.co <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></div></div></div></article><article style="border-radius: 26px; overflow: hidden; background: #EEF0E4; box-shadow: 0 24px 60px rgba(14,23,18,0.18), 0 2px 6px rgba(14,23,18,0.08)"><div style="display: flex; align-items: center; gap: 12px; padding: 12px 18px; background: rgba(255,255,255,0.7); border-bottom: 1.5px solid #D3DAC6"><span aria-hidden="true" style="display: flex; gap: 7px"><span style="width: 12px; height: 12px; border-radius: 50%; background: #E35D5D"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span><span style="width: 12px; height: 12px; border-radius: 50%; background: #22D46B"></span></span><span style="font-weight: 700; font-size: 14px">Cousant — Line 03</span><span style="margin-left: auto; font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; color: #4F5A50">#/trail/consulting</span></div><div style="display: grid; grid-template-columns: minmax(260px, 0.9fr) minmax(0, 2fr); gap: 24px; padding: 14px"><div style="position: relative; border-radius: 18px; overflow: hidden"><div style="position: relative; height: 100%; min-height: 320px; background: #0F2A21; overflow: hidden"><svg aria-hidden="true" viewBox="0 0 360 150" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%"><path d="M0 10 H360" stroke="#1E4536" stroke-width="1"></path><path d="M0 30 H360" stroke="#1E4536" stroke-width="1"></path><path d="M0 50 H360" stroke="#1E4536" stroke-width="1"></path><path d="M0 70 H360" stroke="#1E4536" stroke-width="1"></path><path d="M0 90 H360" stroke="#1E4536" stroke-width="1"></path><path d="M0 110 H360" stroke="#1E4536" stroke-width="1"></path><path d="M0 130 H360" stroke="#1E4536" stroke-width="1"></path><path d="M0 150 H360" stroke="#1E4536" stroke-width="1"></path><rect x="0" y="118" width="360" height="32" fill="#0B2018"></rect><rect x="40" y="96" width="3" height="22" fill="#22D46B"></rect><path d="M41.5 100 q -10 -4 -12 -14 q 10 2 12 14 q 2 -12 12 -14 q -2 10 -12 14" fill="#22D46B"></path><rect x="80" y="96" width="3" height="22" fill="#22D46B"></rect><path d="M81.5 100 q -10 -4 -12 -14 q 10 2 12 14 q 2 -12 12 -14 q -2 10 -12 14" fill="#22D46B"></path><rect x="120" y="96" width="3" height="22" fill="#22D46B"></rect><path d="M121.5 100 q -10 -4 -12 -14 q 10 2 12 14 q 2 -12 12 -14 q -2 10 -12 14" fill="#22D46B"></path><rect x="160" y="96" width="3" height="22" fill="#22D46B"></rect><path d="M161.5 100 q -10 -4 -12 -14 q 10 2 12 14 q 2 -12 12 -14 q -2 10 -12 14" fill="#22D46B"></path><circle cx="210" cy="114" r="5" fill="none" stroke="#C8F25A" stroke-width="2" stroke-dasharray="3 3"></circle><circle cx="250" cy="114" r="5" fill="none" stroke="#C8F25A" stroke-width="2" stroke-dasharray="3 3"></circle><circle cx="290" cy="114" r="5" fill="none" stroke="#C8F25A" stroke-width="2" stroke-dasharray="3 3"></circle><circle cx="330" cy="114" r="5" fill="none" stroke="#C8F25A" stroke-width="2" stroke-dasharray="3 3"></circle><text x="36" y="40" fill="#22D46B" opacity="0.9" font-family="Martian Mono, monospace" font-size="11" font-weight="600">admin ✓</text><text x="206" y="40" fill="#C8F25A" opacity="0.75" font-family="Martian Mono, monospace" font-size="11" font-weight="600">zoho ✓</text></svg><span style="position: absolute; left: 14px; top: 14px; font-family: 'Martian Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #EEF0E4; background: rgba(8,16,11,0.8); padding: 5px 10px; border-radius: 999px">THE SEEDBED</span></div><span style="position: absolute; right: 16px; bottom: 16px; transform: rotate(-10deg); font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #C8F25A; border: 3px solid #C8F25A; padding: 6px 10px; border-radius: 10px; background: rgba(8,16,11,0.55)">● LIVE</span></div><div style="padding: 28px 32px 32px 8px; display: flex; flex-direction: column; gap: 16px; min-width: 0"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.1em"><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #C8F25A; padding: 6px 12px; border-radius: 999px"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: {{accent}}"></span>LIVE · SINCE 2026</span><span style="color: #4F5A50">CONSULTANT SOFTWARE DEVELOPER</span></div><p style="margin: 0; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.08em">CONNECTING COUSANT → ADMINS &amp; COOPERATIVES</p><h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(26px, 2.6vw, 38px); line-height: 1.06; letter-spacing: -0.02em">Planting products for Cousant’s clients.</h3><p style="margin: 0; font-size: 17px; line-height: 1.6; color: #36423A">The admin dashboard behind <a href="https://fundtronpartners.com/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-underline-offset: 3px">Fundron</a> — and the front end of a Zoho Sigma extension for a cooperative savings platform.</p><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">TanStack</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Zustand</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">React 19</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Zoho Sigma</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; border: 2px solid #0E1712; padding: 6px 12px; border-radius: 999px">Deluge</span></div></div></div></article></div></div>
+  </section>
+
+  <!-- CALL LOG -->
+  <section id="log" style="padding: clamp(72px, 9vw, 128px) clamp(16px, 4vw, 56px) 0">
+    <div style="max-width: 1280px; margin: 0 auto">
+      <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: #4F5A50">§02 — CALL LOG</p>
+      <h2 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.04; letter-spacing: -0.025em">Every call that got through.</h2>
+
+      <div style="margin-top: 40px; border-top: 2px solid #0E1712">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: baseline; padding: 26px 0; border-bottom: 2px dashed #A9B5A8">
+          <span style="flex: 0 0 auto; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 28px; background: #C8F25A; padding: 2px 12px; border-radius: 10px">2023</span>
+          <div style="flex: 1 1 260px; min-width: 0">
+            <p style="margin: 0; font-weight: 700; font-size: 20px">Cousant Limited</p>
+            <p style="margin: 4px 0 0; font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 500; color: #4F5A50">Consultant Software Developer</p>
+          </div>
+          <p style="flex: 2 1 420px; margin: 0; font-size: 17px; line-height: 1.55">Client and admin portals in React, Next.js, Redux Toolkit and MUI — 30+ reusable components and 90+ pages, shipped to spec.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: baseline; padding: 26px 0; border-bottom: 2px dashed #A9B5A8">
+          <span style="flex: 0 0 auto; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 28px; background: #C8F25A; padding: 2px 12px; border-radius: 10px">2022</span>
+          <div style="flex: 1 1 260px; min-width: 0">
+            <p style="margin: 0; font-weight: 700; font-size: 20px">Cousant Limited</p>
+            <p style="margin: 4px 0 0; font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 500; color: #4F5A50">Consultant Software Developer (Contract)</p>
+          </div>
+          <p style="flex: 2 1 420px; margin: 0; font-size: 17px; line-height: 1.55">Kept APIs and admin systems humming with React, Express and MongoDB, containerised in Docker and served through Nginx.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: baseline; padding: 26px 0; border-bottom: 2px dashed #A9B5A8">
+          <span style="flex: 0 0 auto; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 28px; background: #C8F25A; padding: 2px 12px; border-radius: 10px">2022</span>
+          <div style="flex: 1 1 260px; min-width: 0">
+            <p style="margin: 0; font-weight: 700; font-size: 20px"><a href="https://mayovest.com" style="text-decoration-thickness: 2px; text-underline-offset: 4px">Mayovest</a></p>
+            <p style="margin: 4px 0 0; font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 500; color: #4F5A50">Website Developer · Web Development Trainer</p>
+          </div>
+          <p style="flex: 2 1 420px; margin: 0; font-size: 17px; line-height: 1.55">Built mayovest.com on WordPress, then taught students HTML, CSS, JavaScript and React to build interactive websites and apps.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: baseline; padding: 26px 0; border-bottom: 2px dashed #A9B5A8">
+          <span style="flex: 0 0 auto; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 28px; background: #C8F25A; padding: 2px 12px; border-radius: 10px">2021</span>
+          <div style="flex: 1 1 260px; min-width: 0">
+            <p style="margin: 0; font-weight: 700; font-size: 20px">Naurix Limited</p>
+            <p style="margin: 4px 0 0; font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 500; color: #4F5A50">Full-Stack Web Developer</p>
+          </div>
+          <p style="flex: 2 1 420px; margin: 0; font-size: 17px; line-height: 1.55">The company site in Next.js — 11 pages and 33 components from Figma, a headless CMS, deployed on Vercel.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: baseline; padding: 26px 0; border-bottom: 2px solid #0E1712">
+          <span style="flex: 0 0 auto; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 28px; background: #C8F25A; padding: 2px 12px; border-radius: 10px">2019</span>
+          <div style="flex: 1 1 260px; min-width: 0">
+            <p style="margin: 0; font-weight: 700; font-size: 20px">University of Ilorin</p>
+            <p style="margin: 4px 0 0; font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 500; color: #4F5A50">Full-Stack Web Developer</p>
+          </div>
+          <p style="flex: 2 1 420px; margin: 0; font-size: 17px; line-height: 1.55">Built a digital election platform used across faculties and departments, plus a web-based CBT exam system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWITCH ROOM -->
+  <section id="room" style="margin-top: clamp(72px, 9vw, 128px); background: #0E1712; color: #EEF0E4; padding: clamp(64px, 8vw, 112px) 0">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px)">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+        <div>
+          <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: #9AAA9E">§03 — THE SWITCH ROOM</p>
+          <h2 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.04; letter-spacing: -0.025em">Four languages. One switchboard.</h2>
+          <p style="margin: 14px 0 0; max-width: 520px; font-size: 17px; line-height: 1.55; color: #9AAA9E">The wires I actually pull — and what each one carries.</p>
+        </div>
+        <div style="display: flex; gap: 10px">
+          <button type="button" aria-label="Previous language" style="width: 52px; height: 52px; border-radius: 50%; border: 2px solid #EEF0E4; background: transparent; color: #EEF0E4; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button>
+          <button type="button" aria-label="Next language" style="width: 52px; height: 52px; border-radius: 50%; border: 2px solid {{accent}}; background: {{accent}}; color: #0E1712; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1280px; margin: 0 auto">
+      <div style="display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 44px clamp(16px, 4vw, 56px) 8px">
+        <article style="flex: 0 0 min(400px, 86%); scroll-snap-align: start; background: {{accent}}; color: #0E1712; border: 2px solid #0E1712; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em">
+            <span>JACK 01</span><span>USED FOR ↓</span>
+          </div>
+          <h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: -0.04em">TypeScript</h3>
+          <p style="margin: 0; font-weight: 700; font-size: 18px">My mother tongue.</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; color: #0E1712"><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Node.js and Express services on AWS Lambda, SQS and SNS</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Angular, React and TanStack frontends for dashboards and admin portals</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Zoho CRM widgets and the Deluge functions behind them</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Real-time WebSocket notifications at Penaid</span></li></ul>
+          <p style="margin: auto 0 0; padding-top: 14px; border-top: 2px dashed #0E1712; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.1em">WHERE · PENAID · YALO · COUSANT</p>
+        </article>
+        <article style="flex: 0 0 min(400px, 86%); scroll-snap-align: start; background: #C8F25A; color: #0E1712; border: 2px solid #0E1712; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em">
+            <span>JACK 02</span><span>USED FOR ↓</span>
+          </div>
+          <h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: -0.04em">C#</h3>
+          <p style="margin: 0; font-weight: 700; font-size: 18px">Enterprise-grade backends.</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; color: #0E1712"><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>YALO's backend services and APIs in ASP.NET Core and EF Core</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>CRM-as-code tooling that provisions Zoho CRM from version control</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Manager-based services over a DDD domain model, with validation and cleanly testable layers</span></li></ul>
+          <p style="margin: auto 0 0; padding-top: 14px; border-top: 2px dashed #0E1712; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.1em">WHERE · YALO</p>
+        </article>
+        <article style="flex: 0 0 min(400px, 86%); scroll-snap-align: start; background: #EEF0E4; color: #0E1712; border: 2px solid #0E1712; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em">
+            <span>JACK 03</span><span>USED FOR ↓</span>
+          </div>
+          <h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: -0.04em">Go</h3>
+          <p style="margin: 0; font-weight: 700; font-size: 18px">Speed and concurrency.</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; color: #0E1712"><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Penaid's API services and backend</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Concurrent request handling with typed request/response contracts</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #0E1712"></span><span>Idiomatic, lean services that keep infrastructure small</span></li></ul>
+          <p style="margin: auto 0 0; padding-top: 14px; border-top: 2px dashed #0E1712; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.1em">WHERE · PENAID</p>
+        </article>
+        <article style="flex: 0 0 min(400px, 86%); scroll-snap-align: start; background: #18241D; color: #EEF0E4; border: 2px solid #C8F25A; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 16px; box-sizing: border-box">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em">
+            <span>JACK 04</span><span>USED FOR ↓</span>
+          </div>
+          <h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: -0.04em">Deluge</h3>
+          <p style="margin: 0; font-weight: 700; font-size: 18px">Zoho's native tongue.</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; color: #CFD9D1"><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #EEF0E4"></span><span>Zoho CRM functions and workflow automation</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #EEF0E4"></span><span>Server-side functions that power the CRM widgets</span></li><li style="display: flex; gap: 10px; align-items: flex-start"><span aria-hidden="true" style="flex: 0 0 auto; width: 10px; height: 10px; margin-top: 7px; border-radius: 50%; border: 2px solid #EEF0E4"></span><span>The logic behind installable Zoho CRM extensions</span></li></ul>
+          <p style="margin: auto 0 0; padding-top: 14px; border-top: 2px dashed #EEF0E4; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.1em">WHERE · YALO · COUSANT</p>
+        </article>
+      </div>
+      <div style="padding: 22px clamp(16px, 4vw, 56px) 0"><div aria-hidden="true" style="display: flex; gap: 8px; align-items: center"><span style="width: 26px; height: 8px; border-radius: 4px; background: {{accent}}"></span><span style="width: 8px; height: 8px; border-radius: 4px; background: #4F5A50"></span><span style="width: 8px; height: 8px; border-radius: 4px; background: #4F5A50"></span><span style="width: 8px; height: 8px; border-radius: 4px; background: #4F5A50"></span></div></div>
+    </div>
+  </section>
+
+<!-- PATCH CABLES -->
+  <section id="cables" style="padding: clamp(72px, 9vw, 128px) clamp(16px, 4vw, 56px) 0">
+    <div style="max-width: 1280px; margin: 0 auto">
+      <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: #4F5A50">§04 — PATCH CABLES</p>
+      <h2 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.04; letter-spacing: -0.025em">Whatever wire the call needs.</h2>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 44px">
+        <p style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 22px">Frontend toolkit</p>
+        <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: #4F5A50">AND WHAT EACH ONE IS FOR</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 18px">
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>React</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">UI</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Component UIs for admin portals, dashboards and Zoho CRM widgets.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>TanStack Start</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">SSR</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Server-rendered React apps with server functions and streaming.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Next.js</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">SSR · SSG</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Company sites and client portals that load fast and rank.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Vite</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">BUILD</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Instant dev server and lean builds for SPAs and CRM widget bundles.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>TanStack Router</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">ROUTING</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Type-safe routes, params and search state — the backbone of the Fundron admin.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>TanStack Query</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">SERVER STATE</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Caching, background refetching and mutations against every API.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>TanStack Form</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">FORMS</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Type-safe forms with field-level and async validation.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>TanStack Table</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">DATA GRIDS</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Headless tables with sorting, filtering and pagination over big datasets.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Zod</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">VALIDATION</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">One schema for form rules and API response parsing, with types inferred for free.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>shadcn/ui</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">COMPONENTS</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Accessible components I own in the codebase, styled with Tailwind.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Tailwind CSS</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">STYLING</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Utility-first styling that keeps every screen consistent.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Angular</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">FRAMEWORK</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Signals-based, SSR-safe customer dashboards and admin portals.</p>
+          </div>
+          <div style="background: #FFFFFF; border: 2px solid #0E1712; border-radius: 18px; padding: 20px; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 18px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>PrimeNG</span>
+              <span style="font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 10px; letter-spacing: 0.1em; background: #C8F25A; padding: 4px 8px; border-radius: 999px">COMPONENTS</span>
+            </div>
+            <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #36423A">Angular data tables, forms and charts without reinventing them.</p>
+          </div>
+      </div>
+
+      <div style="margin-top: 48px; border-top: 2px solid #0E1712">
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 22px 0; border-bottom: 2px dashed #A9B5A8; align-items: center">
+          <span style="flex: 0 0 180px; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.12em">BACKEND</span>
+          <div style="flex: 1 1 400px; display: flex; flex-wrap: wrap; gap: 10px"><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Node.js</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Fastify</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Express</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>ASP.NET Core</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>EF Core</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Go net/http</span></div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 22px 0; border-bottom: 2px dashed #A9B5A8; align-items: center">
+          <span style="flex: 0 0 180px; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.12em">CLOUD &amp; OPS</span>
+          <div style="flex: 1 1 400px; display: flex; flex-wrap: wrap; gap: 10px"><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>AWS Lambda</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>SQS · SNS</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>API Gateway</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>S3</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>Serverless</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>Docker · Nginx</span></div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 22px 0; border-bottom: 2px dashed #A9B5A8; align-items: center">
+          <span style="flex: 0 0 180px; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.12em">DATA</span>
+          <div style="flex: 1 1 400px; display: flex; flex-wrap: wrap; gap: 10px"><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>MongoDB</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>PostgreSQL</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>SQL Server</span><span style="display: inline-flex; align-items: center; gap: 8px; border: 2px solid #0E1712; padding: 7px 16px 7px 8px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: {{accent}}; border: 2px solid #0E1712"></span>Redis</span></div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 22px 0; border-bottom: 2px dashed #A9B5A8; align-items: center">
+          <span style="flex: 0 0 180px; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.12em">ZOHO PLATFORM</span>
+          <div style="flex: 1 1 400px; display: flex; flex-wrap: wrap; gap: 10px"><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>Zoho CRM</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>Sigma · ZET</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>CRM Widgets</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>Zoho WorkDrive</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>Zoho Books</span><span style="display: inline-flex; align-items: center; gap: 8px; background: #0E1712; color: #EEF0E4; padding: 9px 16px 9px 10px; border-radius: 999px; font-weight: 600; font-size: 15px"><span aria-hidden="true" style="width: 12px; height: 12px; border-radius: 50%; background: #C8F25A"></span>Zoho Desk</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROADCAST -->
+  <section id="broadcast" style="padding: clamp(72px, 9vw, 128px) clamp(16px, 4vw, 56px) 0">
+    <div style="max-width: 1280px; margin: 0 auto">
+      <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; color: #4F5A50">§05 — BROADCAST</p>
+      <h2 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 64px); line-height: 1.04; letter-spacing: -0.025em">I also teach the wiring.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 40px">
+        <div style="flex: 1 1 480px; min-width: 0; background: #0E1712; color: #EEF0E4; border-radius: 28px; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em">
+            <span style="color: #C8F25A">CLASSROOM 01 · TRAINER</span><span style="color: #9AAA9E">2017 — 2021</span>
+          </div>
+          <h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.1">University of Ilorin</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #CFD9D1">Four years teaching students to program — from first compiles to shipped web pages.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px">
+            <span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: {{accent}}; color: #0E1712; padding: 7px 12px; border-radius: 999px">C / C++</span>
+            <span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: {{accent}}; color: #0E1712; padding: 7px 12px; border-radius: 999px">Fortran</span>
+            <span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: {{accent}}; color: #0E1712; padding: 7px 12px; border-radius: 999px">LaTeX</span>
+            <span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: {{accent}}; color: #0E1712; padding: 7px 12px; border-radius: 999px">Web development</span>
+          </div>
+        </div>
+        <div style="flex: 1 1 480px; min-width: 0; background: #C8F25A; border: 2px solid #0E1712; border-radius: 28px; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em">
+            <span>CLASSROOM 02 · TRAINER + BUILDER</span><span>SINCE 2022</span>
+          </div>
+          <h3 style="margin: 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.1">Mayovest</h3>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6">Built mayovest.com on WordPress as its website developer — then taught students HTML, CSS, JavaScript and React to build interactive websites and apps.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px"><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: #0E1712; color: #C8F25A; padding: 7px 12px; border-radius: 999px">WordPress</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: #0E1712; color: #C8F25A; padding: 7px 12px; border-radius: 999px">HTML</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: #0E1712; color: #C8F25A; padding: 7px 12px; border-radius: 999px">CSS</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: #0E1712; color: #C8F25A; padding: 7px 12px; border-radius: 999px">JavaScript</span><span style="font-family: 'Martian Mono', monospace; font-size: 13px; font-weight: 600; background: #0E1712; color: #C8F25A; padding: 7px 12px; border-radius: 999px">React</span></div>
+          <a href="https://mayovest.com" style="margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 20px; border-radius: 999px; background: #0E1712; color: #C8F25A; font-weight: 700; font-size: 15px; text-decoration: none">Visit mayovest.com <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"></path></svg></a>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px">
+        <div style="flex: 1 1 300px; border: 2px solid #0E1712; border-radius: 24px; padding: 26px; background: #FFFFFF">
+          <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: #4F5A50">CHANNEL 3 · FIELD MANUALS</p>
+          <h3 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.2">Developer books as single HTML files</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #36423A">Self-contained field manuals that walk developers through a stack, end to end.</p>
+        </div>
+        <div style="flex: 1 1 300px; border: 2px solid #0E1712; border-radius: 24px; padding: 26px; background: #FFFFFF">
+          <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: #4F5A50">CHANNEL 4 · FOUNDATION</p>
+          <h3 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.2">B.Sc. Mathematics</h3>
+          <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #36423A">University of Ilorin, 2021.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="ring" style="margin-top: clamp(72px, 9vw, 128px); background: {{accent}}; border-top: 2px solid #0E1712; padding: clamp(64px, 8vw, 112px) clamp(16px, 4vw, 56px); position: relative; overflow: hidden">
+    <svg aria-hidden="true" viewBox="0 0 1000 300" preserveAspectRatio="none" style="position: absolute; right: -40px; top: 0; width: 60%; height: 100%; opacity: 0.9"><path d="M0 40 C 300 360, 600 -60, 1000 240" fill="none" stroke="#0E1712" stroke-width="10" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg>
+    <div style="max-width: 1280px; margin: 0 auto; position: relative">
+      <p style="margin: 0; font-family: 'Martian Mono', monospace; font-weight: 600; font-size: 13px; letter-spacing: 0.14em">§06 — RING THE LINE</p>
+      <h2 style="margin: 12px 0 0; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(40px, 6.4vw, 104px); line-height: 1; letter-spacing: -0.035em; max-width: 1000px">Got a product that needs a live line?</h2>
+      <a href="mailto:xarmzon@gmail.com" style="display: inline-block; margin-top: 32px; font-family: 'Tilt Warp', sans-serif; font-weight: 400; font-size: clamp(20px, 3vw, 40px); color: #0E1712; text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 8px; word-break: break-all">xarmzon@gmail.com</a>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px">
+        <a href="https://github.com/xarmzon" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0E1712; color: #EEF0E4; font-weight: 700; font-size: 16px; text-decoration: none">GitHub</a>
+        <a href="https://www.linkedin.com/in/rastaxarm/" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; background: #0E1712; color: #EEF0E4; font-weight: 700; font-size: 16px; text-decoration: none">LinkedIn</a>
+        <a href="https://drive.google.com/uc?export=download&amp;id=1oPKm7xLPt8nyLgTQi5NGwrcCOR1z7DrC" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 22px; border-radius: 999px; border: 2px solid #0E1712; color: #0E1712; background: #C8F25A; font-weight: 700; font-size: 16px; text-decoration: none">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #0E1712; color: #9AAA9E; padding: 24px clamp(16px, 4vw, 56px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'Martian Mono', monospace; font-size: 12px; font-weight: 500; letter-spacing: 0.08em">
+    <span>© 2026 KAYODE SAMSON ADELOLA · AKA RASTAXARM</span>
+    <span>OPERATOR SIGNING OFF · LINES STAY OPEN</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#22D46B","options":["#22D46B","#00C2A8","#A3E635","#16A34A"]},"$preview":{"width":1440,"height":9300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#22D46B' };
+  }
+}
+</script>
+</body>
+</html>
