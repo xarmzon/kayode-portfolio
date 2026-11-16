@@ -40,8 +40,12 @@ export const chapterSchema = z.object({
   world: z.string(),
   /** The one thing the visitor does. */
   action: z.string(),
-  /** One-line summary used for meta descriptions and the trail map. */
+  /** One-line summary used for meta descriptions. */
   summary: z.string(),
+  /** Place name on the trail map. */
+  place: z.string(),
+  /** Short note under the place name on the trail map. */
+  mapNote: z.string(),
 })
 export type Chapter = z.infer<typeof chapterSchema>
 
@@ -124,3 +128,15 @@ export const statusBarSchema = z.object({
   skipShort: z.string(),
 })
 export type StatusBar = z.infer<typeof statusBarSchema>
+
+export const trailMapSchema = z.object({
+  kicker: z.string(),
+  heading: z.string(),
+  highlight: z.string(),
+  sub: z.string(),
+  youAreHere: z.string(),
+  startHere: z.string(),
+  resume: z.string(),
+  legend: z.object({ visited: z.string(), here: z.string(), ahead: z.string() }),
+})
+export type TrailMap = z.infer<typeof trailMapSchema>

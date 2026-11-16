@@ -1,34 +1,25 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { chapters } from '@/content'
-import { ChapterLink } from '@/components/chapter-link'
+import { trailMap } from '@/content'
+import { TrailMap } from '@/components/trail-map'
 import { seo } from '@/lib/seo'
 
 export const Route = createFileRoute('/map')({
-  head: () =>
-    seo({ title: 'Trail map', description: 'Jump to any stop on the trail.', path: '/map' }),
-  component: TrailMap,
+  head: () => seo({ title: 'Switchboard map', description: trailMap.sub, path: '/map' }),
+  component: MapPage,
 })
 
-/** Phase 1 list version. Phase 2 draws the map with "You are here" and visited stops. */
-function TrailMap() {
+function MapPage() {
   return (
-    <main id="content" className="mx-auto max-w-4xl gutter py-12 md:py-20">
-      <p className="label text-lime">Switchboard map</p>
-      <h1 className="mt-3 font-display text-h2">Jump to any line.</h1>
-      <ol className="mt-10 grid gap-3 sm:grid-cols-2">
-        {chapters.map((c) => (
-          <li key={c.slug}>
-            <ChapterLink
-              slug={c.slug}
-              className="flex min-h-11 flex-col rounded-lg bg-panel p-4 hover:outline hover:outline-lime"
-            >
-              <span className="label text-muted-dark">{c.number}</span>
-              <span className="font-semibold">{c.title}</span>
-              <span className="text-sm text-muted-dark">{c.summary}</span>
-            </ChapterLink>
-          </li>
-        ))}
-      </ol>
+    <main id="content" className="mx-auto max-w-6xl gutter py-8 md:py-12">
+      <p className="label text-muted-dark">{trailMap.kicker}</p>
+      <h1 className="mt-3 max-w-4xl font-display text-h2">
+        {trailMap.heading}{' '}
+        <span className="inline-block -rotate-[1.5deg] rounded-md bg-lime px-3 text-ink">
+          {trailMap.highlight}
+        </span>
+      </h1>
+      <p className="mt-4 max-w-3xl text-muted-dark">{trailMap.sub}</p>
+      <TrailMap />
     </main>
   )
 }

@@ -8,6 +8,7 @@ import type {
   Ring,
   StatusBar,
   Tool,
+  TrailMap,
 } from './schema'
 
 /** Chapters 00–01. */
@@ -221,4 +222,16 @@ export const statusBar: StatusBar = {
   map: 'Switchboard map',
   skip: 'Skip the call — show me the CV',
   skipShort: 'CV',
+}
+
+/** /map. */
+export const trailMap: TrailMap = {
+  kicker: 'Switchboard map · a place to walk, not a page to scroll',
+  heading: 'Welcome to the trail.',
+  highlight: 'Every stop has a story.',
+  sub: 'Eleven stops through one coding-in-nature world. Every stop has its own link — share /trail/penaid and it opens right there.',
+  youAreHere: 'You are here',
+  startHere: 'Start here',
+  resume: 'Pick up where you left off',
+  legend: { visited: 'Visited', here: 'You are here', ahead: 'Not yet' },
 }

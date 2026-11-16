@@ -97,7 +97,7 @@ function ChapterBody({ chapter }: { chapter: Chapter }) {
           <h1 className="font-display text-h2">Four languages, and what each was used for.</h1>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {languages.map((lang) => (
-              <article key={lang.name} className="rounded-xl bg-panel p-6 shadow-window">
+              <article key={lang.name} className="min-w-0 rounded-xl bg-panel p-6 shadow-window">
                 <h2 className="font-display text-2xl">{lang.name}</h2>
                 <p className="mt-1 label text-muted-dark">{lang.usedAt.join(' · ')}</p>
                 <ul className="mt-4 list-disc space-y-1 pl-5">
