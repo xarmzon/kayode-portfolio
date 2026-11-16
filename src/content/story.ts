@@ -1,4 +1,14 @@
-import type { CallLogEntry, ChipRow, Classroom, Hero, Language, Line, Ring, Tool } from './schema'
+import type {
+  CallLogEntry,
+  ChipRow,
+  Classroom,
+  Hero,
+  Language,
+  Line,
+  Ring,
+  StatusBar,
+  Tool,
+} from './schema'
 
 /** Chapters 00–01. */
 export const hero: Hero = {
@@ -201,4 +211,14 @@ export const classroom: Classroom = {
 export const ring: Ring = {
   heading: 'Got a product that needs a live line?',
   actions: { ring: 'Ring the line', cv: 'Download CV', replay: 'Replay' },
+}
+
+/** The always-on call-status bar. */
+export const statusBar: StatusBar = {
+  live: 'On the line',
+  chapterLabel: 'CH',
+  offTrail: 'Off the trail',
+  map: 'Switchboard map',
+  skip: 'Skip the call — show me the CV',
+  skipShort: 'CV',
 }
