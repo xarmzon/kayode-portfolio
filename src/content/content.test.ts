@@ -17,6 +17,7 @@ describe('content schema', () => {
     ['callLog', z.array(schema.callLogEntrySchema), story.callLog],
     ['classroom', schema.classroomSchema, story.classroom],
     ['ring', schema.ringSchema, story.ring],
+    ['statusBar', schema.statusBarSchema, story.statusBar],
   ] as const)('%s is valid', (_name, s, data) => {
     expect(() => s.parse(data)).not.toThrow()
   })

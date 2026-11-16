@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router'
 import { site } from '@/content'
 
 /**
- * Phase 1 placeholder navigation. Phase 2 replaces it with the call-status bar.
+ * Brand and secondary links. The call-status bar carries the map and CV.
  */
 export function SiteNav() {
   return (
@@ -11,18 +11,12 @@ export function SiteNav() {
         {site.shortName.toUpperCase()}
       </Link>
       <nav aria-label="Main" className="flex flex-wrap gap-x-5 gap-y-2 label">
-        <Link to="/map" className="py-3 hover:text-lime">
-          Map
-        </Link>
         <Link to="/calendar" className="py-3 hover:text-lime">
           Calendar
         </Link>
         <Link to="/quick" className="py-3 hover:text-lime">
           60-second version
         </Link>
-        <a href={site.cvPath} className="py-3 hover:text-lime">
-          CV
-        </a>
       </nav>
     </header>
   )

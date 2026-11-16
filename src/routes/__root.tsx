@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { site } from '@/content'
 import { SiteNav } from '@/components/site-nav'
+import { CallStatusBar } from '@/components/call-status-bar'
 import appCss from '../styles.css?url'
 
 export const Route = createRootRoute({
@@ -40,8 +41,12 @@ function RootDocument({ children }: { children: ReactNode }) {
         >
           Skip to content
         </a>
-        <SiteNav />
-        {children}
+        <CallStatusBar />
+        {/* Room for the status bar: top on desktop, floating pill at the bottom on phones. */}
+        <div className="pb-24 md:pt-20 md:pb-0">
+          <SiteNav />
+          {children}
+        </div>
         <Scripts />
       </body>
     </html>

@@ -114,3 +114,13 @@ export type ChipRow = z.infer<typeof chipRowSchema>
 export type CallLogEntry = z.infer<typeof callLogEntrySchema>
 export type Classroom = z.infer<typeof classroomSchema>
 export type Ring = z.infer<typeof ringSchema>
+
+export const statusBarSchema = z.object({
+  live: z.string(),
+  chapterLabel: z.string(),
+  offTrail: z.string(),
+  map: z.string(),
+  skip: z.string(),
+  skipShort: z.string(),
+})
+export type StatusBar = z.infer<typeof statusBarSchema>
