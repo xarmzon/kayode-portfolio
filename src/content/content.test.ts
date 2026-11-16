@@ -18,6 +18,7 @@ describe('content schema', () => {
     ['classroom', schema.classroomSchema, story.classroom],
     ['ring', schema.ringSchema, story.ring],
     ['statusBar', schema.statusBarSchema, story.statusBar],
+    ['trailMap', schema.trailMapSchema, story.trailMap],
   ] as const)('%s is valid', (_name, s, data) => {
     expect(() => s.parse(data)).not.toThrow()
   })
